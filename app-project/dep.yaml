@@ -4,6 +4,7 @@ metadata:
   name: myapp
   namespace: default
 spec:
+  replicas: 5
   selector:
     matchLabels:
       app: myapp
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: nginx
+        image: aabhinnavdocker/nginx_app:0.1
         resources:
           limits:
             memory: "128Mi"
